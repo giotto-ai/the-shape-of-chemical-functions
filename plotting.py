@@ -56,7 +56,6 @@ def plot_network_diffusion(G, pos, node_vector=None, edge_vector=None, node_labe
         nx.draw_networkx_labels(G, pos)
 
     plt.axis('off')
-    plt.savefig("graphClass.png")
     plt.show()
 
     return
