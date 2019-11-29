@@ -18,14 +18,16 @@ def mol_to_nx(mol):
         g.add_edge(bond.GetBeginAtomIdx(),
                     bond.GetEndAtomIdx(),
                     bond_type=bond.GetBondType())
-    return G
+    return g
 
 
 def compute_node_edge_entropy(g, i, taus_n, taus_e):
     cd = CreateCliqueComplex(graph=g).create_complex_from_graph()
-    lap = CreateLaplacianMatrices().fit().transform(cd, (0, 1))
-    mh_n = GraphEntropy().fit().transform(HeatDiffusion().fit(taus_n).transform(lap[0])).T
-    mh_e = GraphEntropy().fit().transform(HeatDiffusion().fit(taus_e).transform(lap[1])).T
+    lap = CreateLaplacianMatrices().fit(cd, (0, 1)).transform(cd)
+    n_diff = HeatDiffusion().fit(lap[0], taus_n).transform(lap[0])
+    e_diff = HeatDiffusion().fit(lap[1], taus_e).transform(lap[1])
+    mh_n = GraphEntropy().fit(n_diff).transform(n_diff).T
+    mh_e = GraphEntropy().fit(e_diff).transform(e_diff).T
 
     if i % 1000 == 0:
         print(i)
