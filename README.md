@@ -1,11 +1,19 @@
-giotto-learn
+Shape of Molecules
 ============
+The application of Machine Learning for biological data is one of the 
+most promising and fascinating research direction of AI. In this notebook
+we want to give a baseline indication to show how topological data analysis 
+tools can be exploited to analyze molecules. More importantly, we show empirically
+that shapes matter, in the sense that it is possible to match properties objects with
+their shapes. 
 
-
-giotto-learn is a high performance topological machine learning toolbox in Python built on top of
-scikit-learn and is distributed under the Apache 2.0 license. It is part of the Giotto open-source project.
-
-Website: https://giotto.ai
+The HIV dataset was introduced by the Drug
+Therapeutics Program (DTP) AIDS Antiviral Screen, which
+tested the ability to inhibit HIV replication for over 40 000
+compounds. In the original dataset the chemical compounds were classified
+into 3 different classes: confirmed inactive (CI), confirmed active (CA)
+and confirmed moderately active (CM). As done in this [paper](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a), 
+the two classes CA and CM were grouped into one single class "Active".
 
 Installation
 ------------
@@ -80,21 +88,3 @@ source directory::
     pytest giotto
 
 
-Changelog
----------
-
-See the `RELEASE.rst <https://github.com/giotto-ai/giotto-learn/blob/master/RELEASE.rst>`__ file
-for a history of notable changes to giotto-learn.
-
-Important links
-~~~~~~~~~~~~~~~
-
-- Official source code repo: https://github.com/giotto-ai/giotto-learn
-- Download releases: https://pypi.org/project/giotto-learn/
-- Issue tracker: https://github.com/giotto-ai/giotto-learn/issues
-
-
-Contacts:
----------
-
-maintainers@giotto.ai

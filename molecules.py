@@ -59,8 +59,7 @@ def graph_to_points(g_mol, n):
     j = 0
     d = dict()
     for i in range(len(g_mol)):
-        # if (g_mol[i].number_of_nodes() > 10 and g_mol[i].number_of_nodes() < 100):
-        if n==0:
+        if n == 0:
             d[i] = np.arange(j, j + g_mol[i].number_of_nodes())
             j += g_mol[i].number_of_nodes()
         else:
