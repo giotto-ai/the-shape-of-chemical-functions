@@ -25,7 +25,7 @@ which is parametrized by a simple 2-hidden-layers nerual network.
 
 
 Dependencies
-~~~~~~~~~~~~
+------------
 
 shape-of-molecules requires:
 
