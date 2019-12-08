@@ -23,8 +23,6 @@ most important part of the pipeline by learning meaningful features of molecules
 the vector representation are obtained, they are used as input for a calssificator function
 which is parametrized by a simple 2-hidden-layers nerual network. 
 
-Installation
-------------
 
 Dependencies
 ~~~~~~~~~~~~
@@ -35,64 +33,21 @@ shape-of-molecules requires:
 - scikit-learn (>= 0.21.3)
 - NumPy (>= 1.14.0)
 - networkx (>= 2.4)
+- giotto-learn (>= 0.1.3)
+- tensorflow (>=1.14.0)
+- rdkit (>= 2018.03.4.0)
+- deepchem (>= 2.2.1.dev54)
+- keras (>= 2.3.1)
 
-For running the examples jupyter, matplotlib and plotly are required.
+To install rdkit and deepchem with conda:
+    conda install -c deepchem -c rdkit
 
-User installation
-~~~~~~~~~~~~~~~~~
-
-If you already have a working installation of numpy and scipy,
-the easiest way to install giotto-learn is using ``pip``   ::
-
-    pip install -U giotto-learn
 
 Documentation
 -------------
 
-- HTML documentation (stable release): https://docs.giotto.ai
-
-Contributing
-------------
-
-We welcome new contributors of all experience levels. The Giotto
-community goals are to be helpful, welcoming, and effective. To learn more about
-making a contribution to giotto-learn, please see the `CONTRIBUTING.rst
-<https://github.com/giotto-ai/giotto-learn/blob/master/CONTRIBUTING.rst>`_ file.
-
-Developer installation
-~~~~~~~~~~~~~~~~~~~~~~~
-
-C++ dependencies:
-'''''''''''''''''
-
--  C++14 compatible compiler
--  CMake >= 3.9
--  Boost >= 1.56
-
-Source code
-'''''''''''
-
-You can check the latest sources with the command::
-
-    git clone https://github.com/giotto-ai/giotto-learn.git
-
-
-To install:
-'''''''''''
-
-.. code-block:: bash
-
-   cd giotto-learn
-   pip install -e .
-
-From there any change in the library files will be immediately available on your machine.
-
-Testing
-~~~~~~~
-
-After installation, you can launch the test suite from outside the
-source directory::
-
-    pytest giotto
+- [MoleculeNet: a benchmark for molecular machine learning](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a)
+- [Giotto Learn](https://github.com/giotto-ai/giotto-learn)
+- [Deepchem](https://github.com/deepchem/deepchem)
 
 
