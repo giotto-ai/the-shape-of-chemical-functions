@@ -40,7 +40,7 @@ shape-of-molecules requires:
 - keras (>= 2.3.1)
 
 To install rdkit and deepchem with conda:
-'''''''''''''''''''''''''''''''''''''''''
+
 
     conda install -c deepchem -c rdkit
 
