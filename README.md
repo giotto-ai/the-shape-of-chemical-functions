@@ -4,8 +4,8 @@ The application of Machine Learning for biological data is one of the
 most promising and fascinating research direction of AI. In this notebook
 we want to give a baseline indication to show how topological data analysis 
 tools can be exploited to analyze molecules. More importantly, we show empirically
-that shapes matter, in the sense that it is possible to match properties objects with
-their shapes. 
+that shapes matter, in the sense that it is possible to match properties of objects with
+their shapes.
 
 The HIV dataset was introduced by the Drug
 Therapeutics Program (DTP) AIDS Antiviral Screen, which
@@ -14,6 +14,14 @@ compounds. In the original dataset the chemical compounds were classified
 into 3 different classes: confirmed inactive (CI), confirmed active (CA)
 and confirmed moderately active (CM). As done in this [paper](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a), 
 the two classes CA and CM were grouped into one single class "Active".
+
+The task of this use case is to classify molecules with respect to their 
+inhibition property for the HIV virus. In order to achieve it, we propose a method 
+to embed molecules into points of an Euclidean Space and so to represent chemical 
+compounds with vectors. The method, which is based on TDA concepts, represents the 
+most important part of the pipeline by learning meaningful features of molecules. Once 
+the vector representation are obtained, they are used as input for a calssificator function
+which is parametrized by a simple 2-hidden-layers nerual network. 
 
 Installation
 ------------
@@ -26,7 +34,7 @@ shape-of-molecules requires:
 - Python (>= 3.5)
 - scikit-learn (>= 0.21.3)
 - NumPy (>= 1.14.0)
-- joblib (>= 0.11)
+- networkx (>= 2.4)
 
 For running the examples jupyter, matplotlib and plotly are required.
 
