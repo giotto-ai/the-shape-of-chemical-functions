@@ -38,6 +38,19 @@ def compute_node_edge_entropy(g, i, taus_n, taus_e):
     return [mh_n, mh_e]
 
 
+def bonds_type_to_edge(g_mol):
+    for i, g in enumerate(g_mol):
+        d_e = dict()
+        for e in g.edges():
+            b = int(g.get_edge_data(e[0], e[1])['bond_type'])
+            d_e[e] = np.zeros(4)
+            if b == 12:
+                d_e[e][3] = 1
+            else:
+                d_e[e][b-1] = 1
+        nx.set_edge_attributes(g, name='bonds_one_hot', values=d_e)
+
+
 def bonds_type(g_mol):
     for g in g_mol:
         d_n = dict()
@@ -51,7 +64,6 @@ def bonds_type(g_mol):
                     d_n[n][3] += 1
                 else:
                     d_n[n][edge_type - 1] += 1
-        # Adding bonds information to each node of all molecules
         nx.set_node_attributes(g, name='bonds_one_hot', values=d_n)
 
 
