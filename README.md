@@ -29,7 +29,7 @@ the two classes CA and CM were grouped into one single class "Active".
 ## Feature Creation
 The innovative part of using TDA in this classification problem consists in finding meaningful structural features for molecules. The idea is to embed molecules into an Euclidean Space where the Euclidean distance reflects the notion of structural dissimilarity.
 
-In o
+In 
 
 
 ## Model
@@ -45,14 +45,14 @@ Our results show that the structural features found contain good quality informa
 ## Requirements
 In order to run the notebook, the following python packages are required: 
 
-- scikit-learn (>= 0.21.3)
-- numpy (>= 1.14.0)
-- networkx (>= 2.4)
-- giotto-learn (>= 0.1.3)
-- rdkit (>= 2018.03.4.0)
-- deepchem (>= 2.2.1.dev54)
-- keras (>= 2.3.1)
-- pandas (>=0.25.2)
+- scikit-learn 0.21.3
+- numpy 1.14.0
+- networkx 2.4
+- giotto-learn 0.1.3
+- rdkit 2018.03.4.0
+- deepchem 2.2.1.dev54
+- keras 2.3.1
+- pandas 0.25.2
 
 To install rdkit and deepchem with conda:
 
