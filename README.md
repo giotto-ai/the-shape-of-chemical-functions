@@ -1,6 +1,6 @@
 <img src="https://www.giotto.ai/static/vector/logo.svg" alt="logo" width="850"/>
 
-# shape-of-molecules
+# Shape-of-molecules
 The application of Machine Learning for biological data is one of the 
 most promising and fascinating research direction of AI. In this notebook
 we want to give a baseline indication to show how topological data analysis 
@@ -27,35 +27,20 @@ and confirmed moderately active (CM). As done in this [paper](https://pubs.rsc.o
 the two classes CA and CM were grouped into one single class "Active".
 
 ## Feature Creation
-The assumption we made is that each match can be modelled as the attributes of the 
-starting eleven of the two teams. Since in this way the number of features was too 
-high, an additional aggregation step was required (see the notebook for further 
-details). 
+The innovative part of using TDA in this classification problem consists in finding meaningful structural features for molecules. The idea is to embed molecules into an Euclidean Space where the Euclidean distance reflects the notion of structural dissimilarity.
 
-Thus, each match can be considered as a vector in a vector space and the totality of 
-matches can be viewed as a point cloud.
+In o
 
-For capturing local information surrounding a match, we computed persistent homology 
-of its k-nearest neighbours and use it as a feature. 
 
 ## Model
-We cross-validated a random forest classifier and train it to predict the outcome of 
-a match. In order to validate our results, we used an elo-rating system and the odds 
-of the market as baselines. 
+We cross-validated a fully connected neural network with 2 hidden layers: the hidden neurons present a ReLu activation function whereas the single output neuron has a sigmoid activation which represent the probability for an input molecule to be a HIV-inhibitor.
 
 ## Results
-Our results show that our model out-performs the elo-rating system and is 
-comparable to the market.  
-
+Our results show that the structural features found contain good quality informations on the inhibition property for the HIV viruses providing AUC-ROC scores comparable with the state-of-the-art solutions reported [here](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a).
+ 
 ## Notebook overview
-Given the promising results, we tried to simulate an entire championship with the 
-ultimate purpose of evaluating the impact that a player would have had if hired by 
-our favorite team. Therefore, we offer the possibility to select both the favorite 
-player and the lucky team where to insert him. Then you can simulate the championship
-and check if your player improves the final ranking of his new team (little spoiler: 
-Messi does!). 
 
-Enjoy!
+
 
 ## Requirements
 In order to run the notebook, the following python packages are required: 
