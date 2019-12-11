@@ -69,13 +69,13 @@ def bonds_type(g_mol):
 
 def graph_to_points(g_mol, n):
     j = 0
-    d = dict()
+    d = list()
     for i in range(len(g_mol)):
         if n == 0:
-            d[i] = np.arange(j, j + g_mol[i].number_of_nodes())
+            d.append(np.arange(j, j + g_mol[i].number_of_nodes()))
             j += g_mol[i].number_of_nodes()
         else:
-            d[i] = np.arange(j, j + g_mol[i].number_of_edges())
+            d.append(np.arange(j, j + g_mol[i].number_of_edges()))
             j += g_mol[i].number_of_edges()
 
     return d

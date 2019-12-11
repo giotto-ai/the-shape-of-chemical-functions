@@ -17,7 +17,7 @@ def plot_entropies(entropies, s_list):
 
     for i in s_list:
         # plot entropies Vs temporal indexes
-        hs1 = entropies[:, i]
+        hs1 = entropies[i]
         _ = plt.plot(hs1, label="clique " + str(i), color=colors[i % len(colors)])
 
     plt.xticks()
