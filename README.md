@@ -39,7 +39,7 @@ We cross-validated a fully connected neural network with 2 hidden layers: the hi
 Our results show that the structural features found contain good quality informations on the inhibition property for the HIV viruses providing AUC-ROC scores comparable with the state-of-the-art solutions reported [here](https://pubs.rsc.org/en/content/articlehtml/2018/sc/c7sc02664a).
  
 ## Notebook overview
-
+In this notebook we want to show how structural features can be inferred by using topological tools. In particolar, we provide atoms and bonds embedding for each molecules and, following the pipeline, we show that the classification procedure goes to very good results. Moreover, we let the user play with the hyperparameters and classificator model to see if other interesting results appear.
 
 
 ## Requirements
