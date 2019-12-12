@@ -1,6 +1,6 @@
 <img src="https://www.giotto.ai/static/vector/logo.svg" alt="logo" width="850"/>
 
-# Shape-of-molecules
+# The-shape-of-chemical-functions
 The application of Machine Learning for biological data is one of the 
 most promising and fascinating research direction of AI. In this notebook
 we want to give a baseline indication to show how topological data analysis 
