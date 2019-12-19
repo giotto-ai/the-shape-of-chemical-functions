@@ -48,7 +48,7 @@ In order to run the notebook, the following python packages are required:
 - scikit-learn 0.21.3
 - numpy 1.14.0
 - networkx 2.4
-- giotto-learn 0.1.3
+- giotto-learn-nightly
 - rdkit 2018.03.4.0
 - deepchem 2.2.1.dev54
 - keras 2.3.1
