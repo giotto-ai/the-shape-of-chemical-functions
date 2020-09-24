@@ -1,4 +1,4 @@
-<img src="https://www.giotto.ai/static/vector/logo.svg" alt="logo" width="850"/>
+![logo](https://raw.githubusercontent.com/giotto-ai/giotto-tda/master/doc/images/tda_logo.svg)
 
 # The-shape-of-chemical-functions
 The application of Machine Learning for biological data is one of the 
@@ -16,6 +16,8 @@ most important part of the pipeline by learning meaningful features of molecules
 the vector representation are obtained, they are used as input for a calssificator function
 which is parametrized by a simple 2-hidden-layers nerual network. 
 
+Have a lok at out [blog post](https://towardsdatascience.com/the-shape-of-chemical-functions-d1e1568d020)
+to learn more.
 
 ## Data
 The HIV dataset was introduced by the Drug
